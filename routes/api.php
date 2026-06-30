@@ -10,6 +10,11 @@ Route::prefix('auth')->group(function () {
     Route::post('/login', [AuthController::class, 'login']);
 });
 
+// Route::middleware('auth:sanctum')->group(function () {
+//     Route::get('/blueprints', [CampaignBlueprintController::class, 'index']);
+//     Route::get('/blueprints/{blueprint}', [CampaignBlueprintController::class, 'show']);
+// });
+
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::delete('auth/logout', [AuthController::class, 'logout']);
